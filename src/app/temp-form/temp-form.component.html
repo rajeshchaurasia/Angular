@@ -1,0 +1,13 @@
+<form #regsiterForm="ngForm" (ngSubmit)="register(user)">
+
+      <div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid">
+        <input type="text" required [email]="user.email !== ''" [(ngModel)]="user.email" name="email" class="form-control" placeholder="Email"
+          #email="ngModel">
+        <span class="help-block" *ngIf="email.errors?.required && email.touched">
+          Email is required
+        </span>
+        <span class="help-block" *ngIf="email.errors?.email && email.touched">
+          Email is invalid
+        </span>
+ 	</div>
+</form>

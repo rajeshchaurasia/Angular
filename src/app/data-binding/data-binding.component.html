@@ -1,0 +1,25 @@
+<p>data-binding works!</p>
+
+<h2> one way data bidning from component to view</h2>
+<p>1. Single data binding using interpolation component->view  {{message}} </p>
+
+<p>2. property binding to the innerHTML property of the span tag. It will bind the value of message to the span element <span [innerHTML]='message'></span> </p>  
+
+<p> binding. In this example, we are binding a color style to the 'h1' element. It will display the text within the h1 tags in a blue color.<span [style.color]="blue">This is a red Heading</span></p>
+
+
+<h2> one way data bidning from From View to Component</h2>
+
+<p> One-way data binding from view to the component can be achieved by using the event binding technique.
+</p>
+
+<button (click)="myFunction()">Show alert</button>
+
+<h2> Two way data binding bidirectional</h2>
+
+<p>Two-way data binding can be achieved using a ngModel directive in Angular. The below syntax shows the data binding using (ngModel), which is basically the combination of both the square brackets of property binding and parentheses of the event binding. </p>
+
+Enter the value  : <input [(ngModel)] ='val'> 
+               <br> 
+Entered value is:  {{val}} 
+

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" [hidden]="currentUser">
+  <a class="navbar-brand" href="#">Blog Demo Mongo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Signup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/chart">Charts</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" *ngIf="currentUser">
+    <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" routerLink="/blog">Blog</a>
+        <a class="nav-item nav-link" routerLink="/chart">Chart</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<hr>
+<!-- main app container --> 
+
+<button (click)= "createComponent('call component')" name="btn name" value="all to mycomponent"> ddd</button>
+
+ <template #messagecontainer>
+ </template>
+
+
+    <div class="container">
+
+                <alert></alert>
+                <router-outlet></router-outlet>
+
+    </div>
+
+ 
